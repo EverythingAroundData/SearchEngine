@@ -1,3 +1,5 @@
+#Git connection successfull
+
 page = '''<div id="top_bin"> <div id="top_content" class="width960">
    <div class="udacity float-left"> <a href="/">'''
 
