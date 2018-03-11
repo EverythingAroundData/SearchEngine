@@ -1,4 +1,4 @@
-#Git connection successfull
+﻿#Git connection successfull. for 1st file
 
 page = '''<div id="top_bin"> <div id="top_content" class="width960">
    <div class="udacity float-left"> <a href="/">'''
