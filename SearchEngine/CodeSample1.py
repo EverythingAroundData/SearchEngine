@@ -21,9 +21,8 @@ print (url)
 
 #Lesson 2
 
-#1
+#1 - rounding off
 x = 3.14159
-
 print (str(x+0.5)[:str(x+0.5).find('.')])
 
 #2
