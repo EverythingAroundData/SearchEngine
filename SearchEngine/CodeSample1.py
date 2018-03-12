@@ -1,4 +1,4 @@
-﻿#Git connection successfull. for 1st file
+﻿#Lesson 1
 
 page = '''<div id="top_bin"> <div id="top_content" class="width960">
    <div class="udacity float-left"> <a href="/">'''
@@ -18,3 +18,28 @@ stop_pos = req_link.find('"', start_pos+1)
 url = req_link[start_pos:stop_pos]
 
 print (url)
+
+#Lesson 2
+
+#1
+x = 3.14159
+
+print (str(x+0.5)[:str(x+0.5).find('.')])
+
+#2
+s = 'udacity'
+t = 'bodacious'
+
+print (s[:3]+t[4:])
+
+#3
+text = 'Hello Helloo Helllooo Halo'
+
+print (text.find('hoo'))
+
+#4
+text = 'zip files are zipped'
+print (text.find('zip', text.find('zip')+1))
+
+text = 'zip files are compressed'
+print (text.find('zip', text.find('zip')+1))
