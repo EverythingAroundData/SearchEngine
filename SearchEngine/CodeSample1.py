@@ -42,3 +42,14 @@ print (text.find('zip', text.find('zip')+1))
 
 text = 'zip files are compressed'
 print (text.find('zip', text.find('zip')+1))
+
+
+#Lesson 3
+
+#1
+marker = "AFK"
+replacement = "away from keyboard"
+line = "I will now go to sleep and be AFK until lunch time tomorrow."
+
+replaced = line[:line.find(marker)]+replacement+line[line.find(marker)+len(marker):]
+print (replaced)
