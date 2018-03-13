@@ -1,4 +1,5 @@
-﻿#Lesson 1
+﻿################################## Unit 1 ###########################################
+#Lesson 1
 
 page = '''<div id="top_bin"> <div id="top_content" class="width960">
    <div class="udacity float-left"> <a href="/">'''
@@ -53,3 +54,16 @@ line = "I will now go to sleep and be AFK until lunch time tomorrow."
 
 replaced = line[:line.find(marker)]+replacement+line[line.find(marker)+len(marker):]
 print (replaced)
+
+#2 - Palindrome
+word = 'madam'
+
+if word == word[::-1]: # reverse string using [::-1]
+    print ('Palindrome')
+else:
+    print('Not a Palindrome')
+
+#3 - another use of  [::4] = [start_pos:end_pos:seed_value]
+
+r = list(range(20))[::4]
+print  (r)
