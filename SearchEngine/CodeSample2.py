@@ -1,6 +1,6 @@
 ﻿################################## Unit 2 ###########################################
 #Lesson 5
-#recursion
+#1. recursion
 page =('<div id="top_bin"><div id="top_content" class="width960">'
 '<div class="udacity float-left"><a href="http://udacity.com">'
 '<div class="udacity float-left"><a href="http://twitter.com">'
@@ -25,3 +25,27 @@ def get_next_link(page_content):
     get_next_link(pagecontent)
 
 get_next_link(page)
+
+#2. return Second occurance of string
+
+danton = "De l'audace, encore de l'audace, toujours de l'audace"
+
+def find_second(s, f):
+    return s.find(f, s.find(f)+1)
+
+print (find_second(danton, 'audace'))
+
+#3. find a friend
+
+def is_friend(fname):
+    if fname[0] in ('D', 'd', 'N', 'n'):
+        return 'Friend'
+    else:
+        return 'not a Friend'
+
+print (is_friend('Dave'))
+print (is_friend('Glenn'))
+print (is_friend('Nitin'))
+
+#4. max of nos.
+
