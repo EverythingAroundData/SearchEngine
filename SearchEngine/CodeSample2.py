@@ -48,4 +48,14 @@ print (is_friend('Glenn'))
 print (is_friend('Nitin'))
 
 #4. max of nos.
+listofnum = [44, 6, 98, 37, 102, 59, 81]
 
+def maxno(numlist):
+    a = 0
+    for n in numlist:
+        if a < n:
+            maxnum = n
+            a = n
+    return maxnum
+
+print (maxno(listofnum))
