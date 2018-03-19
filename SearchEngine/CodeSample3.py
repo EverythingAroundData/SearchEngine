@@ -18,3 +18,12 @@ print (median(a))
 
 b = [5, 7, 12, 8]
 print (median(b))
+
+#2. find last
+
+def find_last(s):
+    for i in range(len(s))[::-1]:
+            print (s[i])
+            
+
+find_last('acdg dd ac')
