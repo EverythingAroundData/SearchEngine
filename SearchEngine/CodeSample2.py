@@ -59,3 +59,13 @@ def maxno(numlist):
     return maxnum
 
 print (maxno(listofnum))
+
+#5. Factorial -  while can be used like while True to keep iterating
+def factorial(n):
+    fact = n
+    while n>1:
+        fact = (n-1)*(fact) 
+        n = n - 1
+    return fact
+
+print (factorial(5))
