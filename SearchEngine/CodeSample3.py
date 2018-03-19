@@ -21,9 +21,21 @@ print (median(b))
 
 #2. find last
 
-def find_last(s):
-    for i in range(len(s))[::-1]:
-            print (s[i])
-            
+def maxno(numlist):
+    a = 0
+    for n in numlist:
+        if a < n:
+            maxnum = n
+            a = n
+    return maxnum
 
-find_last('acdg dd ac')
+def find_last(s, t):
+    l = len(t)
+    lst = []
+    for i in range(len(s))[::1]:
+        if t == s[i:i+l]:
+            lst.append(i)
+    p = maxno(lst)
+    return (p)        
+                  
+print (find_last('acdg dd ac', 'ac'))
