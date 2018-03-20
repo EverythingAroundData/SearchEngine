@@ -2,6 +2,7 @@
 #Lesson 6
 #1. Median
 import math as m
+from CodeSample2 import MyFirst as mf
 
 def median(a):
     a.sort()
@@ -21,13 +22,7 @@ print (median(b))
 
 #2. find last
 
-def maxno(numlist):
-    a = 0
-    for n in numlist:
-        if a < n:
-            maxnum = n
-            a = n
-    return maxnum
+instance = mf()
 
 def find_last(s, t):
     l = len(t)
@@ -35,7 +30,7 @@ def find_last(s, t):
     for i in range(len(s))[::1]:
         if t == s[i:i+l]:
             lst.append(i)
-    p = maxno(lst)
+    p = instance.maxno(lst)
     return (p)        
                   
 print (find_last('acdg dd ac', 'ac'))
