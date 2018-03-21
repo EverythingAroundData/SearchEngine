@@ -46,12 +46,12 @@ def stamp(amt):
             one = 0
         if five%2 == 1:
             one = 1
-    if five==0:
+    else:
+        if five==0:
+            one = 0
+        if five == 1:
+            one = 1
         t = 0
-        one = 0
-    if five == 1:
-        t = 0
-        one = 1
     return '('+str(f)+'p, '+str(t)+'p, '+str(one)+'p)'
 
 print (stamp(74))
