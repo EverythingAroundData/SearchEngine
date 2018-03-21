@@ -27,13 +27,16 @@ instance = mf()
 def find_last(s, t):
     l = len(t)
     lst = []
-    for i in range(len(s))[::1]:
-        if t == s[i:i+l]:
-            lst.append(i)
-    p = instance.maxno(lst)
-    return (p)        
+    if s.find(t) == -1:
+        return 'string not found'
+    else:
+        for i in range(len(s))[::1]:
+            if t == s[i:i+l]:
+                lst.append(i)
+        p = instance.maxno(lst)
+        return (p)        
                   
-print (find_last('acdg dd ac', 'ac'))
+print (find_last('acdg dd ac', 'z'))
 
 #3. divide the amount in multiple of 5, 2 and 1
 
@@ -55,3 +58,12 @@ def stamp(amt):
     return '('+str(f)+'p, '+str(t)+'p, '+str(one)+'p)'
 
 print (stamp(74))
+
+#4. range of values in list
+
+def lrange(alist):
+    alist.sort()
+    l = len(alist)
+    return (alist[l-1] - alist[0])
+
+print (lrange([44,6,1,91]))
