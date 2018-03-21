@@ -34,3 +34,24 @@ def find_last(s, t):
     return (p)        
                   
 print (find_last('acdg dd ac', 'ac'))
+
+#3. divide the amount in multiple of 5, 2 and 1
+
+def stamp(amt):
+    f = m.floor(amt/5)
+    five = amt%5
+    if five>=2:
+        t = m.floor(five/2)
+        if five%2 == 0:
+            one = 0
+        if five%2 == 1:
+            one = 1
+    if five==0:
+        t = 0
+        one = 0
+    if five == 1:
+        t = 0
+        one = 1
+    return '('+str(f)+'p, '+str(t)+'p, '+str(one)+'p)'
+
+print (stamp(74))
