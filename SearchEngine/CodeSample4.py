@@ -7,12 +7,10 @@ def print_abacus(value):
     x = str(value)
     for i in range(10):
         if l>i:
-            print ('|00000*****   |')
-    string[::-1]
+            print ('|'+string+'   |')
     for p in x:
         z = int(p)
-        rstring = string[:10-z]+'   '+string[10-z:]
-        print ('|'+rstring+'|')
+        print ('|'+string[:10-z]+'   '+string[10-z:]+'|')
 
 print_abacus(0)
 print_abacus(12345678)
