@@ -48,14 +48,27 @@ print (is_friend('Glenn'))
 print (is_friend('Nitin'))
 
 #4. max of nos.
+
+class MyFirst:
+    def maxno(self, numlist):
+        a = 0
+        for n in numlist:
+            if a < n:
+                maxnum = n
+                a = n
+        return maxnum
+
 listofnum = [44, 6, 98, 37, 102, 59, 81]
+inst = MyFirst()
+print (inst.maxno(listofnum))
 
-def maxno(numlist):
-    a = 0
-    for n in numlist:
-        if a < n:
-            maxnum = n
-            a = n
-    return maxnum
+#5. Factorial -  while can be used like while True to keep iterating
 
-print (maxno(listofnum))
+def factorial(n):
+    fact = n
+    while n>1:
+        fact = (n-1)*(fact) 
+        n = n - 1
+    return fact
+
+print (factorial(5))
