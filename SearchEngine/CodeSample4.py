@@ -1,4 +1,4 @@
-################## Practice Unit ####################
+﻿################## Practice Unit ####################
 #1. Abacus 
 
 def print_abacus(value):
@@ -12,6 +12,7 @@ def print_abacus(value):
         z = int(p)
         print ('|'+string[:10-z]+'   '+string[10-z:]+'|')
 
+<<<<<<< HEAD
 print_abacus(0)
 print_abacus(12345678)
 print_abacus(1337)
@@ -59,3 +60,12 @@ def daysbetweendates(y1, m1, d1, y2, m2, d2):
 
                      
    
+=======
+#print_abacus(0)
+#print_abacus(12345678)
+#print_abacus(1337)
+#print_abacus(4502)
+#print ('My Server Ram')
+#print_abacus(1024*16)
+print_abacus(88451+1438)
+>>>>>>> b8d562caf3f0048b9c87316496c12f4cedf4d483
