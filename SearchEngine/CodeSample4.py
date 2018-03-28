@@ -48,13 +48,15 @@ def daysinmonth(month, year):
 
 #### Please report issue if you find any with the below function
 def daysbetweendates(y1, m1, d1, y2, m2, d2):
-    _dict = {}
+    
     if y1>y2 and m1>m2 and d1>d2:
-        return 'Invalid comparison'
+        return 'Invalid Dates'
     if y1==y2 and m1>m2:
-        return 'Invalid comparison'
+        return 'Invalid Dates'
     if y1==y2 and m1==m2 and d1>d2:
-        return 'Invalid comparison'
+        return 'Invalid Dates'
+    if d1 > daysinmonth(m1, y1) or d2 > daysinmonth(m2, y2):
+        return 'Invalid Dates'
     if y1==y2 and m1==m2 and d1<d2:
         return d2-d1
     dayslist = []
@@ -94,3 +96,5 @@ print (daysbetweendates(2012,1,1,2012,3,1))
 print (daysbetweendates(2011,6,30,2012,6,30))
 print (daysbetweendates(2011,1,1,2012,8,8))
 print (daysbetweendates(1900,1,1,1999,12,31))
+
+print (daysbetweendates(2012,12,15,2013,2,31))
