@@ -1,4 +1,4 @@
-# Define a procedure, total_enrollment,
+﻿# Define a procedure, total_enrollment,
 # that takes as an input a list of elements,
 # where each element is a list containing
 # three elements: a university name,
@@ -125,3 +125,27 @@ print (check_sudoku(s3))
 print (check_sudoku(s4)) 
 print (check_sudoku(s5)) 
 print (check_sudoku(s6)) 
+
+
+# A list is symmetric if the first row is the same as the first column,
+# the second row is the same as the second column and so on. Write a
+# procedure, symmetric, which takes a list as input, and returns the
+# boolean True if the list is symmetric and False if it is not.
+
+
+def isListSymmetric(alist):
+    i = 0
+    j = 0
+    for e in alist:
+        if len(e) != len(alist):
+            return
+    while i<len(alist):
+        while j<len(alist):
+            if alist[i][j] != alist[j][i]:
+                return False
+            j=j+1
+        j=0
+        i=i+1
+    return True
+      
+
