@@ -38,7 +38,7 @@ def total_enrollment(univ_info):
 print (total_enrollment(usa_univs))
 print (total_enrollment(udacious_univs))
 
-## Lesson 11, 2nd last program, and Lesson 12, 6th and 7th program  
+## Lesson 11, 2nd last program, and Lesson 12, 6th and 7th program are on hold
 
 #sudoku
 # A valid sudoku square satisfies these
@@ -138,7 +138,7 @@ def isListSymmetric(alist):
     j = 0
     for e in alist:
         if len(e) != len(alist):
-            return
+            return 'Uneven no. of nested list members'
     while i<len(alist):
         while j<len(alist):
             if alist[i][j] != alist[j][i]:
@@ -148,4 +148,67 @@ def isListSymmetric(alist):
         i=i+1
     return True
       
+list1 = [['Cat', 'Dog', 'Cow'], 
+         ['Dog', 'Lion', 'Tiger'], 
+         ['Cow', 'Tiger', 'Parrot']]
+
+      
+list2 = [['Cat', 'Dog', 'Cow'], 
+         ['Crow', 'Lion', 'Tiger'], 
+         ['Cow', 'Tiger', 'Parrot']]
+
+      
+list3 = [['Cat', 'Dog', 'Cow'], 
+         ['Dog', 'Lion', 'Tiger'], 
+         ['Cow', 'Tiger', 'Parrot', 'Pegion']]
+
+
+print (isListSymmetric(list1))
+print (isListSymmetric(list2))
+print (isListSymmetric(list3))
+
+
+
+# Symmetric Square to return True 
+# if the given square is antisymmetric and False otherwise. 
+# An nxn square is called antisymmetric if A[i][j]=-A[j][i] 
+# for each i=0,1,...,n-1 and for each j=0,1,...,n-1.
+
+def isSquareAntiSymmetric(alist):
+    i = 0
+    j = 0
+    for e in alist:
+        if len(e) != len(alist):
+            return 'Not a square'
+    while i<len(alist):
+        while j<len(alist):
+            if alist[i][j] != -alist[j][i]:
+                return False
+            if i==j and alist[i][j] != 0:
+                return False
+            j=j+1
+        j=0
+        i=i+1
+    return True
+
+print (isSquareAntiSymmetric([[0, 1, -2], 
+                              [-1, 0, 3], 
+                              [2, -3, 0]]))   
+
+
+print (isSquareAntiSymmetric([[0, 0, 0],
+                              [0, 0, 0],
+                              [0, 0, 0]]))
+
+
+print (isSquareAntiSymmetric([[0, 1, 2], 
+                              [-1, 0, -2], 
+                              [2, 2,  3]]))
+
+
+print (isSquareAntiSymmetric([[1, 2, 5],
+                              [0, 1, -9],
+                              [0, 0, 1]]))
+
+#Identity Matrix
 
