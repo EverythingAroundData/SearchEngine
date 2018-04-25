@@ -36,7 +36,7 @@ print ('Absolute Path ' + os.path.abspath('/'))
 dirlist = os.listdir('..')
 print ('list files and folders in cwd ' + str(dirlist))
 
-# 3. os.rename
+# 3. os.rename and change directory
 abspath = os.path.abspath('/') # returns E:\
 
 os.chdir(abspath)
