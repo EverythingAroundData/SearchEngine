@@ -9,6 +9,7 @@
 # Then add this number z to the normal list and continue.
 
 def sublists(nlist):
+    vcomp = nlist[0]
     cntr = 0
     i = 0
     alist = []
@@ -18,18 +19,20 @@ def sublists(nlist):
         if i == 0:
             alist.append(nlist[i])
         else:
-            if nlist[i]>nlist[i-1]:
+            if nlist[i] > vcomp:
                 if len(slist)>0:
                     alist.append(slist)
                     slist = []
                 if len(slist)==0:
                     alist.append(nlist[i])
+                vcomp = nlist[i]
             else:
                 slist.append(nlist[i])
                 cntr = 1
         i=i+1
     if cntr ==1:
-        alist.append(slist)
+        if len(slist)>0:
+            alist.append(slist)
     return alist
 
 
@@ -39,10 +42,16 @@ print (sublists(blist))
 
 blist = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 print (sublists(blist))
+#result = [9, [8, 7, 6, 5, 4, 3, 2, 1]]
 
 blist = [4,5,5,5,3,2,1,2,3,2,6,6]
 print (sublists(blist))
-
+#result = [4, 5, [5, 5, 3, 2, 1, 2, 3, 2], 6, [6]]
 
 blist = [1,2,3,4,5,6,7,8,9]
 print (sublists(blist))
+#result = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+blist = [6,5,4,5,3,6,7,8,9,5,7,10]
+print (sublists(blist))
+#result = [6, [5, 4, 5, 3, 6], 7, 8, 9, [5, 7], 10]
