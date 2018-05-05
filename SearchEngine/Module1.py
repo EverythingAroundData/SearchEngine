@@ -1,4 +1,4 @@
-# list all the methods of a class from module
+# list all the methods of a class from module/s
 
 from CodeSample2 import MyFirst as c
 newlist = dir(c)
