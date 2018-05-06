@@ -1,4 +1,4 @@
-# define a procedure that takes in a string of numbers from 1-9 and
+﻿# define a procedure that takes in a string of numbers from 1-9 and
 # outputs a list with the following parameters:
 # Every number in the string should be inserted into the list.
 # If a number x in the string is less than or equal 
@@ -55,3 +55,34 @@ print (sublists(blist))
 blist = [6,5,4,5,3,6,7,8,9,5,7,10]
 print (sublists(blist))
 #result = [6, [5, 4, 5, 3, 6], 7, 8, 9, [5, 7], 10]
+
+
+# Crypto Analysis: Frequency Analysis
+#
+# To analyze encrypted messages, to find out information about the possible 
+# algorithm or even language of the clear text message, one could perform 
+# frequency analysis. This process could be described as simply counting 
+# the number of times a certain symbol occurs in the given text. 
+# For example:
+# For the text "test" the frequency of 'e' is 1, 's' is 1 and 't' is 2.
+#
+# The input to the function will be an encrypted body of text that only contains 
+# the lowercase letters a-z. 
+# As output you should return a list of the normalized frequency 
+# for each of the letters a-z. 
+# The normalized frequency is simply the number of occurrences, i, 
+# divided by the total number of characters in the message, n.
+
+
+def freq_analysis(string):
+    adict = {}
+    j = 0
+    for i in range(97,123):
+        adict[chr(i)] = 0.0
+    while j < len(string):
+        adict[string[j]] = adict[string[j]] + 0.25
+        j = j+1
+    print (adict)
+
+
+freq_analysis('abcd')
