@@ -91,3 +91,5 @@ def freq_analysis(string):
 freq_analysis('zabcdxd')
 freq_analysis('spark')
 freq_analysis('hadoop')
+freq_analysis('bewarethebunnies')
+freq_analysis('bigdatabrews')
