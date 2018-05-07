@@ -76,13 +76,18 @@ print (sublists(blist))
 
 def freq_analysis(string):
     adict = {}
+    alist = []
     j = 0
     for i in range(97,123):
         adict[chr(i)] = 0.0
     while j < len(string):
         adict[string[j]] = adict[string[j]] + 0.25
         j = j+1
-    print (adict)
+    for c in sorted(adict):
+        alist.append(adict[c])
+    print (alist) 
 
 
-freq_analysis('abcd')
+freq_analysis('zabcdxd')
+freq_analysis('spark')
+freq_analysis('hadoop')
