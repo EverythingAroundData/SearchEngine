@@ -43,4 +43,12 @@ os.chdir(abspath)
 
 print (os.getcwd())
 
-os.rename('New.txt', 'Rename.txt')
+#os.rename('New.txt', 'Rename.txt')
+
+# 4. os.mkdir
+
+os.mkdir('newdir')
+
+# 5. os.rmdir
+
+os.rmdir('newdir')
