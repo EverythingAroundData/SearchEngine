@@ -1,4 +1,4 @@
-# list all the methods of a class from module
+# list all the methods of a class from module/s
 
 from CodeSample2 import MyFirst as c
 newlist = dir(c)
@@ -43,6 +43,7 @@ os.chdir(abspath)
 
 print (os.getcwd())
 
+<<<<<<< HEAD
 #os.rename('New.txt', 'Rename.txt')
 
 # 4. os.mkdir
@@ -52,3 +53,5 @@ os.mkdir('newdir')
 # 5. os.rmdir
 
 os.rmdir('newdir')
+
+os.rename('New.txt', 'Rename.txt')
