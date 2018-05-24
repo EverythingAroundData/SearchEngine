@@ -38,20 +38,15 @@ print ('list files and folders in cwd ' + str(dirlist))
 
 # 3. os.rename and change directory
 abspath = os.path.abspath('/') # returns E:\
-
 os.chdir(abspath)
 
 print (os.getcwd())
 
-<<<<<<< HEAD
 #os.rename('New.txt', 'Rename.txt')
 
 # 4. os.mkdir
-
 os.mkdir('newdir')
 
 # 5. os.rmdir
-
 os.rmdir('newdir')
-
 os.rename('New.txt', 'Rename.txt')
