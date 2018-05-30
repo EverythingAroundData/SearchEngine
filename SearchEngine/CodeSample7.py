@@ -85,4 +85,55 @@ def freq_analysis(string):
     print (adict)
 
 
-freq_analysis('abcd')
+#freq_analysis('abcd')
+
+
+# Define a procedure, add_to_index,
+# that takes 3 inputs:
+
+# - an index: [[<keyword>,[<url>,...]],...]
+# - a keyword: String
+# - a url: String
+
+# If the keyword is already
+# in the index, add the url
+# to the list of urls associated
+# with that keyword.
+
+# If the keyword is not in the index,
+# add an entry to the index: [keyword,[url]]
+
+def add_to_index(index, keyword, url):
+    newindex = []
+    newurl = []
+    collectkeywords = []
+    i = 0
+    j = 0
+    if len(index)==0:
+        newindex.append(keyword)
+        newurl.append(url)
+        newindex.append(newurl)
+        index.append(newindex)
+    else:
+        while i < len(index):
+            collectkeywords.append(index[i][0])
+            i = i + 1
+        if keyword not in collectkeywords:
+            newindex.append(keyword)
+            newurl.append(url)
+            newindex.append(newurl)
+            index.append(newindex)
+        else:
+            j = collectkeywords.index(keyword)
+            if url not in index[j][1]:
+                index[j][1].append(url)
+    return index
+
+index = []
+
+print (add_to_index(index, 'udaity', 'www.udacity.com')) 
+print (add_to_index(index, 'udaity', 'www.facebook.com')) 
+print (add_to_index(index, 'udaity', 'www.linkedin.com')) 
+print (add_to_index(index, 'data bricks', 'www.twitter.com'))
+print (add_to_index(index, 'wierd tiger', 'www.linkedin.com'))  
+print (add_to_index(index, 'wierd tiger', 'www.facebook.com')) 
