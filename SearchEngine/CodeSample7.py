@@ -144,3 +144,19 @@ print (add_to_index(index, 'udaity', 'www.linkedin.com'))
 print (add_to_index(index, 'data bricks', 'www.twitter.com'))
 print (add_to_index(index, 'wierd tiger', 'www.linkedin.com'))  
 print (add_to_index(index, 'wierd tiger', 'www.facebook.com')) 
+
+# Below is the same procedure as above add_to_index (shorter code :) ) 
+def add_to_index_new(index, keyword, url):
+    for kword in index:
+        if kword[0]==keyword:
+            kword[1].append(url)
+            return index
+    index.append([keyword, [url]])
+    return index
+index = []
+print (add_to_index_new(index, 'udaity', 'www.udacity.com')) 
+print (add_to_index_new(index, 'udaity', 'www.facebook.com')) 
+print (add_to_index_new(index, 'udaity', 'www.linkedin.com')) 
+print (add_to_index_new(index, 'data bricks', 'www.twitter.com'))
+print (add_to_index_new(index, 'wierd tiger', 'www.linkedin.com'))  
+print (add_to_index_new(index, 'wierd tiger', 'www.facebook.com')) 
