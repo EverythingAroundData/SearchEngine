@@ -184,3 +184,14 @@ print (lookup(index, 'udacity'))
 # page content by adding the url to the
 # word's associated url list.
 
+def add_page_to_index(index, url, content):
+    pcontent = content.split()
+    for word in pcontent:
+        if lookup(index, word) == []:
+            add_to_index_new(index, word, url)
+    return index
+
+print (add_page_to_index(index,'fake.text',"This is a test"))
+
+print (add_page_to_index(index,'www.udacity.com',"Portal for learning new stuff"))
+
