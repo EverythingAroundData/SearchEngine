@@ -98,3 +98,5 @@ print (add_page_to_index(index,'fake.text',"This is a test"))
 
 print (add_page_to_index(index,'www.udacity.com',"Portal for learning new stuff"))
 
+
+# Web crawler function to be added
