@@ -1,8 +1,8 @@
-import urllib.request as r
+﻿import urllib.request as r
 from Class1 import web as w
 from Class1 import weburls as u
 
-MyFInstance = w()
+#MyFInstance = w()
 
 #print (MyFInstance.add_to_index([], 'linkedin', 'http://linkedin.com/'))
 
